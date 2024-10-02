@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import icon1 from '../assets/contactIcon1.svg'
+import icon3 from '../assets/contactIcon3.svg'
+import icon4 from '../assets/contactIcon4.svg'
+import icon5 from '../assets/contactIcon5.svg'
+import icon2 from '../assets/contactIcon2.svg'
 
 interface ContactFormFields {
     name: string;
@@ -32,11 +37,11 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <form className="w-full mx-auto p-4 bg-transaprent rounded-md" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2 gap-4">
-                <div className="mb-4">
+        <form className="w-full bg-transaprent rounded-md" onSubmit={handleSubmit}>
+            <div className="grid grid-cols-2 gap-4 ">
+                <div className="mb-4 relative">
                     <input
-                        className=" appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[33.4375rem] h-[6.25rem]"
+                        className=" appearance-none border rounded w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[33.4375rem] h-[6.25rem] font-poppins text-[1.5rem] font-normal leading-[2.25rem] text-[#5E5F63] "
                         id="name"
                         name="name"
                         type="text"
@@ -44,11 +49,14 @@ const ContactForm: React.FC = () => {
                         value={formData.name}
                         onChange={handleChange}
                     />
+                    <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
+                        <img src={icon1} alt="" className='w-full h-full'/>
+                    </div>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-4 relative">
                     <input
-                        className=" appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[33.4375rem] h-[6.25rem]"
+                        className=" appearance-none border rounded w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[33.4375rem] h-[6.25rem] font-poppins text-[1.5rem] font-normal leading-[2.25rem] text-[#5E5F63]"
                         id="email"
                         name="email"
                         type="email"
@@ -56,23 +64,31 @@ const ContactForm: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                     />
+                    <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
+                        <img src={icon2} alt="" className='w-full h-full'/>
+                    </div>
                 </div>
 
-                <div className="mb-4">
-                    <input
-                        className=" appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[33.4375rem] h-[6.25rem]"
+                <div className="mb-4 relative">
+                    <select
+                        className=" appearance-none border rounded w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[33.4375rem] h-[6.25rem] font-poppins text-[1.5rem] font-normal leading-[2.25rem] text-[#5E5F63]"
                         id="propertyType"
                         name="propertyType"
-                        type="text"
-                        placeholder="Type of Property"
+                        // type="text"
+                        // placeholder="Type of Property"
                         value={formData.propertyType}
-                        onChange={handleChange}
-                    />
+                        // onChange={handleChange}
+                    >
+                        <option value="1"> Type of Property</option>
+                    </select>
+                    <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
+                        <img src={icon3} alt="" className='w-full h-full'/>
+                    </div>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-4 relative">
                     <input
-                        className=" appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[33.4375rem] h-[6.25rem]"
+                        className=" appearance-none border rounded w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[33.4375rem] h-[6.25rem] font-poppins text-[1.5rem] font-normal leading-[2.25rem] text-[#5E5F63]"
                         id="phoneNumber"
                         name="phoneNumber"
                         type="tel"
@@ -80,23 +96,29 @@ const ContactForm: React.FC = () => {
                         value={formData.phoneNumber}
                         onChange={handleChange}
                     />
+                    <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
+                        <img src={icon4} alt="" className='w-full h-full'/>
+                    </div>
                 </div>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 relative">
                 <textarea
-                    className=" appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[71.4rem] h-[14.25rem]"
+                    className=" appearance-none border rounded w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[71.4rem] h-[14.25rem] font-poppins text-[1.5rem] font-normal leading-[2.25rem] text-[#5E5F63]"
                     id="message"
                     name="message"
-                    placeholder="Your Message"
+                    placeholder="Write your message here"
                     value={formData.message}
                     onChange={handleChange}
                 />
+                <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
+                        <img src={icon5} alt="" className='w-full h-full'/>
+                    </div>
             </div>
 
             <div className="flex items-center justify-between">
                 <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="w-[17.75rem] h-[4.6875rem] bg-[#EE0020] rounded-[0.3125rem] font-poppins text-[2rem] font-semibold leading-[3rem] text-[#FFFFFF]"
                     type="submit"
                 >
                     Send

@@ -63,9 +63,9 @@ const Contact = () => {
         </div>
       </div>
       <section className="w-full bg-[#FFF] flex  justify-center">
-        <main className="w-[76.75rem] h-[63.3125rem] rounded-[0.625rem] bg-[#F8F7FC] my-[3rem] shadow-[0px_4px_4px_0px_#00000040]">
-          <h1>Drop us a line</h1>
-          <p>Your email address will not be published. Required fields are marked *</p>
+        <main className="w-[76.75rem] h-[63.3125rem] rounded-[0.625rem] bg-[#F8F7FC] my-[3rem] shadow-[0px_4px_4px_0px_#00000040] p-[4rem] space-y-8">
+          <h1 className="font-poppins text-[2.5rem] font-semibold leading-[3.75rem] tracking-[0.05em] text-[#000000]">Drop us a line</h1>
+          <p className="font-poppins text-[1.25rem] font-normal leading-[1.875rem] text-[#5E5F63]">Your email address will not be published. Required fields are marked *</p>
             <ContactForm/>
         </main>
       </section>
