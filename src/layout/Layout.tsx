@@ -15,7 +15,7 @@ const Layout = () => {
     <Header/>
     <HeroSection/>
     <Outlet/>
-    <Footer marginTop={homePage ? '7rem' : null }/>
+    <Footer marginTop={homePage ? 'mt-[10rem] md:mt-[7rem]' : '' }/>
     </>
   )
 }
