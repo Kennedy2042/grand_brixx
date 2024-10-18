@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ marginTop }) => {
           <div className='flex items-center space-x-2 font-semibold font-poppins text-[#EE0020] leading-[1.3rem]'><MdOutlineEmail /> <span className='text-[#fff] text-[0.9rem]'>grandbrixxproperties@gmail.com</span></div>
           <div className='flex items-center space-x-2 font-semibold font-poppins text-[#EE0020] leading-[1.3rem]'><FiPhone /> <span className='text-[#fff] text-[0.9rem]'>(+234) 8066270084</span></div>
         </div>
-        <div className='w-[70%] flex justify-between'>
+        <div className='w-full md:w-[70%] flex justify-between'>
           <div className='w-[100%] md:w-[20%] flex flex-col gap-[0.5rem] md:gap-[1.5rem]'>
             <h1 className='font-bold  text-[#fff]'>Services</h1>
             <ul className='flex flex-col gap-[0.5rem] text-[#fff]'>

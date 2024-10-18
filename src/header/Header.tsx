@@ -15,14 +15,18 @@ const Route = [
 
 const Header = () => {
     const [menu, setMenu] = useState(false);
+
     return (
-        <div className=' w-full flex h-[10vh] justify-between items-center sticky top-[0] shadow-headBoxShadow bg-white z-10 '>
-            <div className='w-[4%] h-full bg-[#EE0020] flex items-center justify-center'>
+        <div className=' w-full flex h-[4.875rem] md:h-[10vh] justify-between items-center sticky top-[0] shadow-headBoxShadow bg-white z-10 '>
+            <div className=' hidden md:block w-[4.5rem] md:w-[4%] h-full bg-[#EE0020] flex items-center justify-center'>
                 <img src={headerVector} alt="Vector Logo" className='w-[50%] h-[50%]' />
             </div>
-            <div className='flex w-[96%] justify-center items-center'>
+            <div className='md:hidden w-[4.5rem] md:w-[4%] h-full bg-[#EE0020] flex items-center justify-center' onClick={() => setMenu(!menu)}>
+                <img src={headerVector} alt="Vector Logo" className='w-[50%] h-[50%]' />
+            </div>
+            <div className='flex md:w-[96%] justify-center items-center'>
                 <div className='w-[90%] flex justify-between'>
-                    <div className='w-[30%] md:w-[9.4rem] flex items-center'>
+                    <div className='w-[w-[9.375rem]] md:w-[9.4rem] flex items-center'>
                         <img src={logo} alt="logo" className=' w-[100%] md:w-[100%] md:h-[100%]' />
                     </div>
                     <ul className=' justify-between w-[40%] hidden md:flex items-center font-inter leading-[1.5rem] font-medium'>
@@ -38,8 +42,8 @@ const Header = () => {
                             ))
                         }
                     </ul>
-                    <button className='hidden md:block w-[10.5rem] h-[3.5rem] rounded text-[1.3rem] text-[#FFFFFF] font-semibold bg-[#EE0020] font-poppins'>Get a Quote</button>
-                    <div className='md:hidden'>
+                    {/* <button className='hidden md:block w-[10.5rem] h-[3.5rem] rounded text-[1.3rem] text-[#FFFFFF] font-semibold bg-[#EE0020] font-poppins'>Get a Quote</button> */}
+                    {/* <div className='md:hidden'>
                         {
                             menu ?
                                 <IoMdClose className='text-[1.5rem]' onClick={() => setMenu(false)} />
@@ -47,9 +51,9 @@ const Header = () => {
                                 <RxHamburgerMenu className='text-[1.5rem]' onClick={() => setMenu(true)} />
 
                         }
-                    </div>
+                    </div> */}
                     {
-                        menu ? <div className='w-[40%] bg-red-500 absolute h-[40vh] right-[0] top-[100%] flex justify-center items-center bg-yellow-700'>
+                        menu ? <div className='w-[40%] bg-red-500 absolute h-[40vh] left-[0] top-[100%] flex justify-center items-center bg-yellow-700'>
                             <ul className='flex flex-col justify-evenly h-[100%] w-[85%]'>
                                 {
                                     Route.map((e) => (
