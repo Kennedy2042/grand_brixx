@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo2.svg'
 import headerVector from '../assets/headerVector.svg'
-import { RxHamburgerMenu } from 'react-icons/rx'
-import { IoMdClose } from 'react-icons/io'
+// import { RxHamburgerMenu } from 'react-icons/rx'
+// import { IoMdClose } from 'react-icons/io'
 
 const Route = [
     { path: "/", name: "Home" },
