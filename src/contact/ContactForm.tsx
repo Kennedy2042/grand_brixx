@@ -38,19 +38,19 @@ const ContactForm: React.FC = () => {
 
     return (
         <form className="w-full bg-transaprent rounded-md" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2 gap-4 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4">
                 <div className="mb-4 relative">
                     <input
                         className=" appearance-none border rounded w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#5E5F63] bg-transparent w-[33.4375rem] h-[6.25rem] font-poppins text-[1.5rem] font-normal leading-[2.25rem] text-[#5E5F63] "
                         id="name"
                         name="name"
                         type="text"
-                        placeholder="Your Name"
+                        placeholder="Enter your name"
                         value={formData.name}
                         onChange={handleChange}
                     />
-                    <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
-                        <img src={icon1} alt="" className='w-full h-full'/>
+                    <div className='w-[1.2rem] md:w-[1.625rem] h-[1.2rem] md:h-[1.625rem] absolute top-[2.3rem] right-[1rem] md:right-[1.9rem]'>
+                        <img src={icon1} alt="" className='w-full h-full' />
                     </div>
                 </div>
 
@@ -60,12 +60,12 @@ const ContactForm: React.FC = () => {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="Your Email"
+                        placeholder="Enter email  address"
                         value={formData.email}
                         onChange={handleChange}
                     />
-                    <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
-                        <img src={icon2} alt="" className='w-full h-full'/>
+                    <div className='w-[1.2rem] md:w-[1.625rem] h-[1.2rem] md:h-[1.625rem] absolute top-[2.3rem] right-[1rem] md:right-[1.9rem]'>
+                        <img src={icon2} alt="" className='w-full h-full' />
                     </div>
                 </div>
 
@@ -77,12 +77,12 @@ const ContactForm: React.FC = () => {
                         // type="text"
                         // placeholder="Type of Property"
                         value={formData.propertyType}
-                        // onChange={handleChange}
+                    // onChange={handleChange}
                     >
                         <option value="1"> Type of Property</option>
                     </select>
-                    <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
-                        <img src={icon3} alt="" className='w-full h-full'/>
+                    <div className='w-[1.2rem] md:w-[1.625rem] h-[1.2rem] md:h-[1.625rem] absolute top-[2.3rem] right-[1rem] md:right-[1.9rem]'>
+                        <img src={icon3} alt="" className='w-full h-full' />
                     </div>
                 </div>
 
@@ -92,12 +92,12 @@ const ContactForm: React.FC = () => {
                         id="phoneNumber"
                         name="phoneNumber"
                         type="tel"
-                        placeholder="Your Phone Number"
+                        placeholder="Enter phone number"
                         value={formData.phoneNumber}
                         onChange={handleChange}
                     />
-                    <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
-                        <img src={icon4} alt="" className='w-full h-full'/>
+                    <div className='w-[1.2rem] md:w-[1.625rem] h-[1.2rem] md:h-[1.625rem] absolute top-[2.3rem] right-[1rem] md:right-[1.9rem]'>
+                        <img src={icon4} alt="" className='w-full h-full' />
                     </div>
                 </div>
             </div>
@@ -111,14 +111,14 @@ const ContactForm: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                 />
-                <div className='w-[1.625rem] h-[1.625rem] absolute top-[2.3rem] right-[1.9rem]'>
-                        <img src={icon5} alt="" className='w-full h-full'/>
-                    </div>
+                <div className='w-[1.2rem] md:w-[1.625rem] h-[1.2rem] md:h-[1.625rem] absolute top-[2.3rem] right-[1rem] md:right-[1.9rem]'>
+                    <img src={icon5} alt="" className='w-full h-full' />
+                </div>
             </div>
 
             <div className="flex items-center justify-between">
                 <button
-                    className="w-[17.75rem] h-[4.6875rem] bg-[#EE0020] rounded-[0.3125rem] font-poppins text-[2rem] font-semibold leading-[3rem] text-[#FFFFFF]"
+                    className="w-full md:w-[17.75rem] h-[4.6875rem] bg-[#EE0020] rounded-[0.3125rem] font-poppins text-[2rem] font-semibold leading-[3rem] text-[#FFFFFF]"
                     type="submit"
                 >
                     Send
